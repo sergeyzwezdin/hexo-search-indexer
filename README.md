@@ -38,6 +38,10 @@ To configure the plugin add `search_indexer` to Hexo config file. Example:
 search_indexer:
     enabled: true
     content: true
+    include:
+        - name: title
+          cleanup: true
+          index: true
     stemmers:
         - en
         - ru
@@ -53,6 +57,10 @@ search_indexer:
 | --- | --- | --- | --- |
 | `enabled` | `no` | `true` | Flag to disable plugin execution. |
 | `content` | `no` | `true` | Whether clean content should be included into index file as well. If `false` only words dictionary will be included in the index. |
+| `include` | `no` | `[title]` | Array of properties that should be included into index file. |
+| `include[].name` | `yes` | | Property name that should be included into index file. This is the name of `post` object property. |
+| `include[].cleanup` | `yes` | | Whether property value should be cleaned up during indexing. |
+| `include[].index` | `yes` | | Whether property value should be indexed (included into `words` section). |
 | `stemmers` | `no` | `[en, ru]` | The plugin "normailze" the text by clearing symbols from initial text. One of the technique is stemming. This param defines which languages should be used to stem the words. Possible values: `nl`, `en`, `fr`, `id`, `it`, `jp`, `no`/`nb`/`nn`, `pt`, `ru`, `sv`. Check [Natural](https://github.com/NaturalNode/natural#stemmers) library for more details. |
 | `reserved` | `no` | `[]` | The array of the reserved words that won't be processed during words normalization. For example, `ASP.NET` will be splitted into `ASP` and `NET` by default. If you want to preserve this, you need to add this to `reserved` config. |
 | `searchIndexFile` | `no` | `search.json` | Output file name. |

@@ -2,6 +2,7 @@ hexo.config.search_indexer = Object.assign(
     {
         enable: true,
         content: true,
+        include: [{ name: 'title', cleanup: true, index: true }],
         stemmers: ['en', 'ru'],
         reserved: [],
         searchIndexFile: 'search.json'
