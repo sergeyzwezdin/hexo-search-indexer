@@ -5,7 +5,8 @@ hexo.config.search_indexer = Object.assign(
         include: [{ name: 'title', cleanup: true, index: true }],
         stemmers: ['en', 'ru'],
         reserved: [],
-        searchIndexFile: 'search.json'
+        searchIndexFile: 'search.json',
+        minWordLength: 5
     },
     hexo.config.search_indexer
 );

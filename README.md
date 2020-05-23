@@ -50,6 +50,7 @@ search_indexer:
         - vs.net
         - ado.net
         - .net
+    minWordLength: 5
     searchIndexFile: search.json
 ```
 
@@ -63,4 +64,5 @@ search_indexer:
 | `include[].index` | `yes` | | Whether property value should be indexed (included into `words` section). |
 | `stemmers` | `no` | `[en, ru]` | The plugin "normailze" the text by clearing symbols from initial text. One of the technique is stemming. This param defines which languages should be used to stem the words. Possible values: `nl`, `en`, `fr`, `id`, `it`, `jp`, `no`/`nb`/`nn`, `pt`, `ru`, `sv`. Check [Natural](https://github.com/NaturalNode/natural#stemmers) library for more details. |
 | `reserved` | `no` | `[]` | The array of the reserved words that won't be processed during words normalization. For example, `ASP.NET` will be splitted into `ASP` and `NET` by default. If you want to preserve this, you need to add this to `reserved` config. |
+| `minWordLength` | `no` | `5` | Minimum word length. The words shorter than this param will be ignored. |
 | `searchIndexFile` | `no` | `search.json` | Output file name. |
