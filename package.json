@@ -1,6 +1,6 @@
 {
     "name": "hexo-search-indexer",
-    "version": "2.1.1",
+    "version": "3.0.0",
     "description": "Search index generator for Hexo static site generator",
     "main": "index.js",
     "scripts": {
