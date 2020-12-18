@@ -16,7 +16,7 @@
 5. Next you can upload this file into you app that handles search requests. For example, it's very convenient to use serverless application to do the search. 👌
 
 ## Requirements
-- Hexo: 4.x
+- Hexo: 5.x
 - Node 12+
 
 ## Usage
